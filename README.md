@@ -1,265 +1,294 @@
+
 # AcademiX
 
-Plataforma web para estudantes organizarem a rotina acadêmica em um único lugar. Aulas, horários, provas, presenças, atividades e avisos ficam reunidos em uma interface moderna, intuitiva e responsiva.
+Plataforma web para ajudar estudantes a organizar a rotina acadêmica em um só lugar: disciplinas, horários, provas, atividades, frequência e avisos.
 
-O projeto foi desenvolvido durante o Hackathon da UC Frameworks Front-end, em 4 horas, usando React. A solução é somente Front-end, sem backend. Os dados ficam salvos no navegador do usuário.
+O AcademiX foi idealizado durante o Hackathon da unidade curricular **Frameworks Front-end**, com foco no **ODS 4 — Educação de Qualidade**. A proposta prioriza uma experiência simples, responsiva e centrada no estudante.
 
-## ODS
+> **Status do projeto:** em desenvolvimento. Os itens descritos como requisitos e funcionalidades planejadas não devem ser considerados implementados até serem verificados na aplicação.
 
-**ODS 4 - Educação de Qualidade**
+## Índice
 
-O AcademiX contribui para uma experiência educacional mais organizada e acessível. Quando o estudante enxerga com clareza seus compromissos, ele se prepara melhor para as provas, entrega as atividades no prazo e acompanha a própria frequência, o que apoia a permanência e o bom desempenho nos estudos.
+- [Problema e objetivo](#problema-e-objetivo)
+- [Público-alvo](#público-alvo)
+- [ODS 4 — Educação de Qualidade](#ods-4--educação-de-qualidade)
+- [Proposta de valor](#proposta-de-valor)
+- [Benchmarking](#benchmarking)
+- [Requisitos do sistema](#requisitos-do-sistema)
+- [Histórias de usuário](#histórias-de-usuário)
+- [Funcionalidades e status](#funcionalidades-e-status)
+- [Tecnologias](#tecnologias)
+- [Estrutura do projeto](#estrutura-do-projeto)
+- [Como executar](#como-executar)
+- [Protótipo e aplicação](#protótipo-e-aplicação)
+- [Processo de desenvolvimento](#processo-de-desenvolvimento)
+- [Testes e limitações](#testes-e-limitações)
+- [Uso de inteligência artificial](#uso-de-inteligência-artificial)
+- [Equipe](#equipe)
 
-## Problema
+## Problema e objetivo
 
-As informações da vida acadêmica ficam espalhadas em vários lugares, como portal da instituição, grupos de mensagens, e-mail, cadernos e planilhas. Essa fragmentação faz o estudante esquecer provas e prazos, perder avisos importantes e não saber quantas faltas ainda pode ter em cada disciplina. O resultado é estresse, baixo desempenho e risco de reprovação por falta de organização, e não por falta de capacidade.
+Informações da vida acadêmica costumam ficar distribuídas entre portais institucionais, mensagens, e-mails, cadernos e planilhas. Essa fragmentação pode dificultar o acompanhamento de provas, prazos, avisos e frequência.
+
+O objetivo do AcademiX é reunir essas informações em uma interface única para ajudar o estudante a planejar sua rotina, acompanhar suas responsabilidades e identificar compromissos importantes.
 
 ## Público-alvo
 
-Estudantes de escolas técnicas e de faculdades, que lidam com várias disciplinas ao mesmo tempo, rotina de aulas em horários diferentes e muitas atividades e avaliações ao longo do período.
+Estudantes de escolas técnicas e instituições de ensino superior que precisam organizar várias disciplinas, horários de aula, atividades, provas e registros de frequência.
 
-## Definição do problema
+## ODS 4 — Educação de Qualidade
 
-| Item | Descrição |
-|---|---|
-| ODS escolhido | ODS 4 - Educação de Qualidade |
-| Problema | Informações acadêmicas dispersas dificultam a organização da rotina do estudante |
-| Público-alvo | Estudantes de escolas técnicas e faculdades |
-| Necessidade | Reunir aulas, provas, atividades, presenças e avisos em um só lugar, de forma simples e acessível pelo computador e pelo celular |
-| Objetivo da solução | Ajudar o estudante a acompanhar seus compromissos e a se preparar melhor para as atividades acadêmicas |
+O projeto se relaciona ao Objetivo de Desenvolvimento Sustentável 4 ao propor uma ferramenta de apoio à organização dos estudos. A aplicação não substitui os sistemas oficiais das instituições nem garante, por si só, melhores resultados educacionais; sua finalidade é facilitar o planejamento pessoal do estudante.
 
-## Proposta de Valor
+## Proposta de valor
 
 | Pergunta | Resposta |
 |---|---|
-| Qual problema resolvemos? | A desorganização causada por informações acadêmicas espalhadas em vários canais |
-| Para quem? | Estudantes de escolas técnicas e faculdades |
-| Como nossa solução ajuda? | Centraliza aulas, horários, provas, atividades, presenças e avisos em um painel único, com calendário, alertas de prazo e controle de frequência |
-| Qual valor ela entrega? | Menos esquecimentos, mais previsibilidade da rotina e mais tempo para estudar, com uma ferramenta que o próprio aluno controla, sem depender de a instituição adotar um sistema |
+| Qual problema buscamos resolver? | A dificuldade de acompanhar informações acadêmicas espalhadas em diferentes canais. |
+| Para quem? | Estudantes de escolas técnicas e faculdades. |
+| Como a solução ajuda? | A proposta é reunir disciplinas, horários, provas, atividades, frequência e avisos em um painel e calendário. |
+| Qual valor pretende entregar? | Mais visibilidade dos compromissos e apoio ao planejamento da rotina de estudos. |
 
 ## Benchmarking
 
-Foram analisadas 5 soluções existentes relacionadas ao problema.
+O levantamento inicial considerou cinco soluções relacionadas à organização acadêmica. As observações abaixo são uma síntese exploratória e não representam uma avaliação técnica ou teste comparativo formal.
 
-| Solução | Funcionalidades | Público-alvo | Pontos positivos | Pontos negativos | Referência para o AcademiX |
-|---|---|---|---|---|---|
-| Google Classroom | Turmas, mural de avisos, atividades com prazo, entrega de tarefas, integração com agenda | Professores e alunos de instituições que adotam a ferramenta | Gratuito, simples, notificações de prazo | Depende da instituição adotar, não é focado em grade de horários pessoal nem em controle de frequência | Lista de atividades com prazo e status |
-| Moodle | Ambiente virtual de aprendizagem com conteúdos, atividades, fóruns, questionários, notas e avisos | Instituições de ensino, professores e alunos | Muito completo e de código aberto | Interface pode ser densa e a experiência varia conforme a configuração da instituição | Área de avisos importantes |
-| Notion | Páginas e bancos de dados, calendário, templates acadêmicos | Público geral, incluindo estudantes | Muito flexível e personalizável | O aluno precisa montar tudo manualmente, não há cálculo de frequência pronto | Organização por cores e visões diferentes dos mesmos dados |
-| Google Agenda | Eventos, lembretes, visões de dia, semana e mês, cores por calendário | Público geral | Simples, rápido e com notificações | Genérico, não conhece disciplinas, atividades, provas ou presenças | Visão de calendário semanal e mensal |
-| Agenda Edu | Comunicados da escola, agenda escolar e acompanhamento escolar | Escolas, responsáveis e alunos | Comunicação centralizada entre escola e família | Depende de a escola contratar e tem foco na escola e nos responsáveis, com pouco controle pessoal do aluno | Painel inicial com comunicados em destaque |
+| Solução | Recursos de referência | Limitação considerada para este projeto | Ideia aproveitada |
+|---|---|---|---|
+| Google Classroom | Turmas, atividades e avisos | Depende da adoção pela instituição e não tem como foco principal a organização pessoal completa do estudante | Atividades com prazo e status |
+| Moodle | Conteúdos, atividades, fóruns e avisos | A experiência depende da configuração de cada instituição | Área de avisos |
+| Notion | Páginas, bancos de dados e calendários | Exige que o estudante configure sua própria organização | Organização visual por disciplina |
+| Google Agenda | Eventos, lembretes e visões de calendário | É uma agenda geral, sem foco nativo em frequência por disciplina | Calendário semanal e mensal |
+| Agenda Edu | Comunicação e agenda escolar | O foco depende do contexto escolar e da adoção institucional | Comunicados em destaque |
 
-**Características usadas como referência na nossa solução**
+### Diferencial proposto
 
-- Lista de atividades com prazo e status de conclusão (Google Classroom).
-- Área de avisos importantes com marcação de lido (Moodle e Agenda Edu).
-- Cores por disciplina e visões diferentes dos mesmos dados (Notion).
-- Calendário semanal e mensal unificado (Google Agenda).
-- Painel inicial com resumo do que importa hoje (Agenda Edu).
+O AcademiX pretende concentrar a organização pessoal do estudante em um só lugar, incluindo acompanhamento de frequência e alertas. Esse diferencial deverá ser validado durante os testes com usuários.
 
-**Diferencial do AcademiX** reunir tudo em uma única plataforma centrada no aluno, com controle de frequência e alertas, sem depender da instituição.
+## Requisitos do sistema
 
-## Requisitos
+Os requisitos a seguir descrevem o escopo planejado. Consulte a seção [Funcionalidades e status](#funcionalidades-e-status) para distinguir o que já foi implementado do que ainda está planejado.
 
-Como o projeto é somente Front-end, os dados são persistidos no navegador (localStorage), com dados de exemplo para demonstração.
-
-### Requisitos Funcionais
+### Requisitos funcionais
 
 | Código | Descrição |
 |---|---|
-| RF01 | O sistema deve permitir cadastrar um perfil de estudante e acessar a plataforma com ele |
-| RF02 | O sistema deve permitir cadastrar, editar e excluir disciplinas, com nome, professor, sala e cor |
-| RF03 | O sistema deve permitir cadastrar aulas na grade de horários semanal e visualizá-la |
-| RF04 | O sistema deve permitir cadastrar, editar e excluir provas, com disciplina, data, horário e conteúdo |
-| RF05 | O sistema deve permitir cadastrar, editar, concluir e excluir atividades com prazo de entrega |
-| RF06 | O sistema deve permitir registrar presença ou falta em cada aula |
-| RF07 | O sistema deve calcular o percentual de frequência por disciplina e alertar quando estiver próximo do limite mínimo configurado |
-| RF08 | O sistema deve permitir cadastrar avisos importantes, listá-los e marcá-los como lidos |
-| RF09 | O sistema deve exibir um painel inicial com resumo das aulas do dia, próximas provas, atividades pendentes e avisos recentes |
-| RF10 | O sistema deve exibir um calendário semanal e mensal reunindo aulas, provas e prazos de atividades, com filtro por disciplina |
+| RF01 | Permitir cadastrar e consultar o perfil do estudante. |
+| RF02 | Permitir cadastrar, editar e excluir disciplinas, incluindo nome, professor, sala e cor. |
+| RF03 | Permitir cadastrar aulas em uma grade semanal e visualizar os horários. |
+| RF04 | Permitir cadastrar, editar e excluir provas com disciplina, data, horário e conteúdo. |
+| RF05 | Permitir cadastrar, editar, concluir e excluir atividades com prazo. |
+| RF06 | Permitir registrar presença ou falta nas aulas. |
+| RF07 | Calcular a frequência por disciplina e alertar quando estiver próxima do limite configurado. |
+| RF08 | Permitir cadastrar avisos e marcá-los como lidos. |
+| RF09 | Exibir um painel com resumo das aulas do dia, próximas provas, atividades pendentes e avisos recentes. |
+| RF10 | Exibir calendário semanal e mensal com aulas, provas e prazos, com filtro por disciplina. |
 
-### Requisitos Não Funcionais
+### Requisitos não funcionais
 
 | Código | Descrição |
 |---|---|
-| RNF01 | A aplicação deve ser responsiva e funcionar bem em computadores e celulares |
-| RNF02 | A aplicação deve possuir interface acessível, com contraste adequado, rótulos nos campos e navegação por teclado |
-| RNF03 | A aplicação deve apresentar tempo de carregamento adequado, com meta de até 3 segundos na primeira abertura |
-| RNF04 | As principais ações devem poder ser feitas em no máximo 3 cliques a partir do painel inicial |
-| RNF05 | Os dados do usuário devem ser mantidos no navegador após recarregar a página |
-| RNF06 | A aplicação deve funcionar nas versões atuais do Chrome, Firefox, Edge e Safari |
-| RNF07 | O código deve ser organizado em componentes reutilizáveis e em pastas com responsabilidades claras |
-| RNF08 | Os formulários devem validar os dados informados e exibir mensagens de erro compreensíveis |
-| RNF09 | A interface deve apresentar estados de carregamento, de lista vazia e de erro de forma clara |
-| RNF10 | A aplicação deve estar publicada e acessível pela Internet, com o código versionado em Git usando commits no padrão convencional |
+| RNF01 | A interface deve se adaptar a computadores e celulares. |
+| RNF02 | A interface deve buscar acessibilidade, com contraste adequado, rótulos e navegação por teclado. |
+| RNF03 | A aplicação deve ter carregamento adequado; a meta de até 3 segundos deverá ser medida em condições de teste definidas. |
+| RNF04 | As principais ações devem ser simples de encontrar e executar; a meta de até 3 cliques deverá ser validada. |
+| RNF05 | Se usado `localStorage`, os dados devem permanecer após recarregar a página no mesmo navegador e perfil. |
+| RNF06 | A aplicação deverá ser verificada nas versões atuais dos navegadores escolhidos para suporte. |
+| RNF07 | O código deve ser organizado em componentes reutilizáveis e pastas com responsabilidades claras. |
+| RNF08 | Os formulários devem validar dados e exibir mensagens compreensíveis. |
+| RNF09 | A interface deve tratar estados vazios e erros de forma clara; estados de carregamento devem ser usados quando aplicável. |
+| RNF10 | O código deve ser versionado com Git, usar commits convencionais e a aplicação deverá ser publicada se o escopo do evento exigir deploy. |
 
-## User Stories
+## Histórias de usuário
 
-### US01 - Perfil do estudante (RF01)
+### US01 — Perfil do estudante (RF01)
 
-Como estudante, quero criar meu perfil e acessar a plataforma, para ter meus dados acadêmicos reunidos em um só lugar.
+**Como** estudante, **quero** cadastrar meu perfil, **para** personalizar minha organização acadêmica.
 
-**Critérios de aceitação**
+Critérios de aceitação:
+- O formulário valida os campos obrigatórios definidos pela equipe.
+- Após salvar, o usuário consegue acessar o painel.
+- Se houver persistência local implementada, o perfil permanece disponível após recarregar a página.
 
-- O formulário exige nome e curso ou instituição antes de salvar.
-- Após salvar, o estudante é levado ao painel inicial.
-- Ao reabrir o sistema, o perfil continua salvo.
+### US02 — Disciplinas (RF02)
 
-### US02 - Disciplinas (RF02)
+**Como** estudante, **quero** organizar minhas disciplinas, **para** separar meus compromissos por matéria.
 
-Como estudante, quero cadastrar minhas disciplinas, para organizar todo o conteúdo por matéria.
+Critérios de aceitação:
+- É possível informar os campos definidos para uma disciplina.
+- A disciplina aparece na lista após ser salva.
+- Se edição e exclusão estiverem implementadas, ambas funcionam e a exclusão solicita confirmação.
 
-**Critérios de aceitação**
+### US03 — Grade de horários (RF03)
 
-- É possível informar nome, professor, sala e escolher uma cor.
-- A disciplina aparece na lista logo após ser salva.
-- É possível editar e excluir, com pedido de confirmação antes de excluir.
+**Como** estudante, **quero** visualizar meus horários, **para** saber quando tenho aula.
 
-### US03 - Grade de horários (RF03)
+Critérios de aceitação:
+- Cada aula pode ser associada a uma disciplina, dia e horário.
+- A grade permite identificar visualmente as disciplinas.
+- O sistema avisa ou impede conflitos de horário, conforme a regra definida na implementação.
 
-Como estudante, quero cadastrar meus horários de aula, para saber onde e quando estarei em cada dia.
+### US04 — Provas (RF04)
 
-**Critérios de aceitação**
+**Como** estudante, **quero** registrar provas, **para** me preparar com antecedência.
 
-- A aula é vinculada a uma disciplina, a um dia da semana e a um horário.
-- A grade semanal mostra as aulas com a cor da disciplina.
-- O sistema impede cadastrar duas aulas no mesmo dia e horário.
+Critérios de aceitação:
+- A prova pode ser associada a uma disciplina e a uma data.
+- A lista apresenta as provas em ordem cronológica, caso essa ordenação esteja implementada.
+- Provas passadas podem ser diferenciadas visualmente.
 
-### US04 - Provas (RF04)
+### US05 — Atividades (RF05)
 
-Como estudante, quero registrar minhas provas, para me preparar com antecedência.
+**Como** estudante, **quero** registrar atividades e prazos, **para** acompanhar minhas entregas.
 
-**Critérios de aceitação**
+Critérios de aceitação:
+- A atividade possui título, disciplina e prazo, conforme o formulário implementado.
+- É possível identificar atividades concluídas e pendentes.
+- Atividades atrasadas são sinalizadas quando essa regra estiver implementada.
 
-- A prova é cadastrada com disciplina, data, horário e conteúdo.
-- As provas são listadas em ordem de data, das mais próximas para as mais distantes.
-- Provas que já passaram ficam visualmente diferenciadas.
+### US06 — Frequência (RF06)
 
-### US05 - Atividades (RF05)
+**Como** estudante, **quero** registrar presença e falta, **para** acompanhar minha participação nas aulas.
 
-Como estudante, quero cadastrar minhas atividades com prazo, para não perder nenhuma entrega.
+Critérios de aceitação:
+- O usuário consegue registrar o estado de presença de uma aula.
+- O registro pode ser corrigido quando aplicável.
+- Os dados ficam vinculados à disciplina.
 
-**Critérios de aceitação**
+### US07 — Frequência e alertas (RF07)
 
-- A atividade tem título, disciplina e data de entrega.
-- É possível marcar como concluída e desfazer a marcação.
-- Atividades atrasadas e ainda pendentes aparecem destacadas.
+**Como** estudante, **quero** consultar minha frequência por disciplina, **para** perceber quando preciso ter atenção às faltas.
 
-### US06 - Registro de presença (RF06)
+Critérios de aceitação:
+- O percentual é calculado a partir dos registros definidos pelo sistema.
+- O limite de frequência é configurável ou explicitamente informado.
+- Um alerta é apresentado quando o limite de atenção definido é atingido.
 
-Como estudante, quero registrar minha presença ou falta em cada aula, para acompanhar minha frequência.
+### US08 — Avisos (RF08)
 
-**Critérios de aceitação**
+**Como** estudante, **quero** consultar avisos importantes, **para** reduzir a chance de esquecer comunicados.
 
-- Cada aula do dia pode ser marcada como presença ou falta.
-- É possível corrigir um registro feito por engano.
-- O registro fica salvo e vinculado à disciplina.
+Critérios de aceitação:
+- Um aviso possui título, texto e, quando aplicável, data.
+- Avisos não lidos são visualmente identificáveis.
+- O usuário pode marcar um aviso como lido se essa ação estiver implementada.
 
-### US07 - Frequência e alertas (RF07)
+### US09 — Painel inicial (RF09)
 
-Como estudante, quero ver meu percentual de frequência por disciplina, para saber quantas faltas ainda posso ter.
+**Como** estudante, **quero** ver um resumo da minha rotina, **para** identificar rapidamente o que exige atenção.
 
-**Critérios de aceitação**
+Critérios de aceitação:
+- O painel apresenta os dados que já estiverem implementados.
+- Os atalhos levam às áreas correspondentes quando essas telas existem.
+- Quando não houver dados, é exibida uma orientação útil.
 
-- O percentual é calculado automaticamente a partir dos registros.
-- O limite mínimo padrão é 75% e pode ser alterado.
-- Quando a frequência chega perto do limite, aparece um alerta visível na disciplina e no painel.
+### US10 — Calendário (RF10)
 
-### US08 - Avisos (RF08)
+**Como** estudante, **quero** visualizar meus compromissos em calendário, **para** planejar a semana e o mês.
 
-Como estudante, quero registrar e consultar avisos importantes, para não perder comunicados da instituição ou dos professores.
+Critérios de aceitação:
+- As visões semanal e mensal ficam disponíveis se ambas forem implementadas.
+- Aulas, provas e atividades possuem identificação visual clara.
+- O filtro por disciplina funciona caso esteja incluído na versão entregue.
 
-**Critérios de aceitação**
+## Funcionalidades e status
 
-- O aviso pode ser cadastrado com título, texto e data.
-- Avisos não lidos aparecem em destaque.
-- É possível marcar como lido.
+Atualize esta tabela com base no que for possível demonstrar na versão atual. Não marque um item como concluído apenas porque ele está descrito nos requisitos.
 
-### US09 - Painel inicial (RF09)
+| Funcionalidade | Status |
+|---|---|
+| Painel inicial | A verificar |
+| Perfil do estudante | Planejada / a verificar |
+| Cadastro e gerenciamento de disciplinas | Planejada / a verificar |
+| Grade semanal de horários | Planejada / a verificar |
+| Cadastro de provas | Planejada / a verificar |
+| Cadastro e conclusão de atividades | Planejada / a verificar |
+| Registro de presença e falta | Planejada / a verificar |
+| Cálculo de frequência e alertas | Planejada / a verificar |
+| Avisos e marcação de leitura | Planejada / a verificar |
+| Calendário semanal e mensal | Planejada / a verificar |
+| Persistência com `localStorage` | A verificar |
+| Responsividade para celular | A verificar |
 
-Como estudante, quero ver um resumo do meu dia ao abrir o sistema, para saber rapidamente o que precisa ser feito.
+**Legenda sugerida:** `Concluída`, `Parcial`, `Planejada`, `Não incluída`. Antes da entrega, substitua “A verificar” e “Planejada / a verificar” pelo status real.
 
-**Critérios de aceitação**
+## Tecnologias
 
-- O painel mostra as aulas de hoje, as próximas provas, as atividades pendentes e os avisos recentes.
-- Cada bloco leva para a tela completa do respectivo assunto.
-- Quando não há dados, o painel mostra uma mensagem orientando o primeiro cadastro.
+Tecnologias confirmadas pela configuração inicial do projeto:
 
-### US10 - Calendário (RF10)
+- **React** — construção da interface por componentes.
+- **Vite** — ambiente de desenvolvimento e build.
+- **JavaScript** — linguagem principal do front-end.
+- **CSS** — estilização da interface.
+- **Oxlint** — verificação estática de código, conforme a configuração inicial.
+- **Git e GitHub** — versionamento e colaboração.
+- **GitHub Projects** — organização das tarefas em Kanban.
 
-Como estudante, quero ver um calendário com aulas, provas e prazos, para planejar minha semana e meu mês.
+**Persistência:** a proposta inicial considera `localStorage`, mas confirme se foi implementado antes de apresentar como recurso disponível.
 
-**Critérios de aceitação**
+**Roteamento e prototipação:** registre React Router, Figma ou outras ferramentas somente se tiverem sido realmente utilizadas no projeto.
 
-- É possível alternar entre visão semanal e mensal.
-- Aulas, provas e atividades aparecem com identificação visual diferente.
-- O filtro por disciplina mostra apenas os itens da disciplina escolhida.
+## Estrutura do projeto
 
-## Funcionalidades
+A estrutura pode evoluir durante o desenvolvimento. A organização atual deve ser conferida no repositório.
 
-- Perfil do estudante
-- Cadastro de disciplinas com cores
-- Grade de horários semanal
-- Cadastro e acompanhamento de provas
-- Cadastro e conclusão de atividades com prazo
-- Registro de presença e faltas
-- Cálculo de frequência com alerta de limite
-- Avisos importantes com marcação de lido
-- Painel inicial com resumo
-- Calendário semanal e mensal com filtro por disciplina
+```text
+academix-app/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   ├── data/
+│   ├── hooks/
+│   ├── styles/
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
 
-## Tecnologias Utilizadas
+## Como executar
 
-- React
-- Vite
-- React Router
-- CSS puro, com arquivos por componente e variáveis globais
-- localStorage para persistência dos dados
-- Git e GitHub
-- Ferramenta de gestão de projeto a definir (Trello, GitHub Projects ou Notion)
-- Google Stitch para o protótipo
+### Pré-requisitos
 
-## Framework Utilizado
+- Node.js e npm instalados.
+- Git instalado para clonar o repositório.
 
-React, com componentes reutilizáveis, rotas para as telas e estado para controlar os dados da aplicação.
-
-## Como Executar
+### Instalação
 
 ```bash
-git clone URL_DO_REPOSITORIO
-cd academix
+git clone https://github.com/AcademyX-senai/academyx.git
+cd academyx
 npm install
 npm run dev
 ```
 
-Depois, acesse o endereço exibido no terminal (normalmente http://localhost:5173).
+Abra no navegador o endereço local informado pelo Vite no terminal, normalmente `http://localhost:5173/`.
 
-## Estrutura de Pastas
+Para verificar o build de produção:
 
-```
-src/
-├── assets/        imagens e ícones
-├── components/
-│   ├── layout/    Header, Sidebar e estrutura geral das telas
-│   └── ui/        Button, Input, Card, Modal e outros componentes reutilizáveis
-├── context/       estado global (perfil, disciplinas, provas...)
-├── data/          dados de exemplo para demonstração
-├── hooks/         hooks customizados, como useLocalStorage
-├── pages/         uma tela por arquivo (Dashboard, Disciplinas, Provas...)
-├── services/      leitura e gravação no localStorage
-├── styles/        variáveis e estilos globais
-└── utils/         funções auxiliares (datas, cálculo de frequência)
+```bash
+npm run build
 ```
 
-## Protótipo
+Execute também o script de lint disponível no `package.json` se estiver configurado. Os scripts exatos devem ser conferidos nesse arquivo.
 
-O protótipo possui no mínimo 10 telas, com fluxo de navegação e versão para celular.
+## Protótipo e aplicação
+
+Preencha os links abaixo quando estiverem disponíveis. Não mantenha links fictícios ou placeholders na versão final.
 
 | Item | Link |
 |---|---|
-| URL do protótipo | https://stitch.withgoogle.com/projects/2198332946532495130 |
+| Repositório | [AcademiX no GitHub](https://github.com/AcademyX-senai/academyx) |
+| Quadro de tarefas | [GitHub Projects — AcademyX](https://github.com/orgs/AcademyX-senai/projects/1) |
+| Protótipo | A inserir quando disponível |
+| Aplicação publicada | A inserir após o deploy, se realizado |
 
-Telas previstas
+### Telas previstas no escopo
 
 1. Perfil e primeiro acesso
 2. Painel inicial
@@ -273,38 +302,56 @@ Telas previstas
 10. Avisos
 11. Calendário
 
-## Aplicação
+A lista acima representa o escopo planejado; não significa que todas as telas já estejam implementadas ou que exista um protótipo finalizado.
 
-| Item | Link |
-|---|---|
-| URL da aplicação | A preencher |
-| URL do repositório | A preencher |
-| URL do protótipo | https://stitch.withgoogle.com/projects/2198332946532495130 |
+## Processo de desenvolvimento
 
-## Processo de Desenvolvimento
+- Repositório compartilhado no GitHub: [AcademyX-senai/academyx](https://github.com/AcademyX-senai/academyx).
+- Quadro Kanban no [GitHub Projects](https://github.com/orgs/AcademyX-senai/projects/1).
+- Versionamento com Git e mensagens de commit convencionais, como `feat`, `fix`, `style` e `docs`.
+- Fluxo de trabalho: definição do problema, proposta de valor, requisitos, histórias de usuário, protótipo, implementação, testes, publicação (se aplicável) e documentação.
+- O quadro foi planejado com 50 cartões. Confira no projeto quais foram concluídos durante o evento.
 
-- Gestão do projeto no GitHub Projects (quadro Kanban AcademyX) com 50 cartões criados como issues do repositório academyx, numerados de 01 a 50 e organizados por grupo e prioridade. Link https://github.com/orgs/AcademyX-senai/projects/1
-- Versionamento com Git e commits no padrão convencional, como feat, fix, style e docs.
-- Ordem de trabalho seguida durante as 4 horas do hackathon: definição do problema, proposta de valor, requisitos, user stories, protótipo, desenvolvimento, testes, deploy e documentação final.
-- Divisão da equipe e registro do andamento a completar ao longo do desenvolvimento.
+## Testes e limitações
 
-## Inteligência Artificial
+### Verificações antes da entrega
 
-Ferramenta utilizada Claude, da Anthropic.
+- [ ] `npm install` termina sem erros.
+- [ ] `npm run build` termina sem erros.
+- [ ] O fluxo principal da aplicação foi testado manualmente.
+- [ ] Formulários validam entradas inválidas.
+- [ ] Dados permanecem após recarregar a página, se `localStorage` estiver implementado.
+- [ ] Layout foi conferido em tela de computador e celular.
+- [ ] Console do navegador foi verificado quanto a erros.
+- [ ] Links do repositório, protótipo e aplicação foram testados.
 
-Utilização
-- criação dos 50 cartões do quadro no GitHub Projects a partir da lista definida pela equipe.
-- apoio na estruturação da documentação e do README;
-- sugestão da estrutura de pastas do projeto React;
-- sugestão de benchmarking, requisitos e user stories, revisados e ajustados pela equipe.
+### Limitações conhecidas
 
-A equipe é responsável pelo código e pela solução entregue. Atualizar esta seção caso outras ferramentas sejam usadas.
+- A proposta inicial é de uma aplicação somente front-end, sem backend.
+- Se os dados forem armazenados apenas em `localStorage`, eles ficam associados ao navegador e ao perfil local; não há sincronização automática entre dispositivos.
+- Não declare autenticação segura, backup em nuvem ou integração com sistemas institucionais sem implementação real.
+- Registre aqui outras limitações encontradas nos testes antes da apresentação.
 
-## Integrantes
+## Uso de inteligência artificial
 
-| Nome | Papel | Responsabilidades |
+Ferramentas de IA podem ter sido usadas como apoio à organização do trabalho e à documentação. Esta seção deve listar apenas as ferramentas realmente utilizadas pela equipe e descrever seu uso com transparência.
+
+Exemplo de registro a ajustar à experiência real:
+- **Claude (Anthropic):** apoio na organização de tarefas e na elaboração/revisão de documentação, se confirmado pela equipe.
+- **ChatGPT (OpenAI):** apoio na revisão e organização de textos ou planejamento, se confirmado pela equipe.
+
+A equipe é responsável por revisar, validar e compreender os materiais utilizados, bem como por todo o código e pela solução entregue. Informe quais partes foram geradas ou apoiadas por IA e quais foram revisadas pela equipe, de acordo com as regras do hackathon.
+
+## Equipe
+
+A tabela abaixo representa a divisão de responsabilidades planejada. Ajuste-a para refletir as contribuições efetivamente realizadas.
+
+| Integrante | Área principal | Responsabilidades |
 |---|---|---|
-| Amós | Documentação e requisitos | Definir problema, ODS 4 e público-alvo, fazer o benchmarking de 5 soluções, criar a proposta de valor, escrever 10 requisitos funcionais e 10 não funcionais, elaborar as user stories com critérios de aceitação, preparar o README e apoiar o desenvolvimento e os testes |
-| Vinicius | Protótipo e identidade visual | Criar as 10 telas no Figma, definir cores, tipografia e componentes visuais, desenhar o fluxo de navegação, garantir a adaptação para celular, entregar o link do protótipo e apoiar o desenvolvimento das interfaces |
-| Kaique | Kanban, Git e organização técnica | Organizar o GitHub Projects com colunas, prioridades, responsáveis e status, configurar o React com Vite e o repositório, desenvolver componentes e funcionalidades, coordenar os commits e ajudar a publicar a aplicação |
+| Amós | Documentação e requisitos | Organizar a definição do problema, ODS, público-alvo, benchmarking, proposta de valor, requisitos, histórias de usuário e documentação; apoiar testes e revisão. |
+| Vinicius | Protótipo e identidade visual | Desenvolver o protótipo, definir identidade visual e componentes de interface, desenhar o fluxo de navegação e considerar a adaptação para celular. |
+| Kaique | Integração técnica e versionamento | Configurar o projeto React/Vite e o repositório, organizar o Kanban e os commits, integrar funcionalidades, apoiar a implementação e realizar a publicação se prevista. |
 
+---
+
+**AcademiX — organização acadêmica centrada no estudante.**
