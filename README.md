@@ -1,20 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-
 # AcademiX
 
 Plataforma web para estudantes organizarem a rotina acadêmica em um único lugar. Aulas, horários, provas, presenças, atividades e avisos ficam reunidos em uma interface moderna, intuitiva e responsiva.
@@ -227,16 +210,14 @@ Como estudante, quero ver um calendário com aulas, provas e prazos, para planej
 
 ## Tecnologias Utilizadas
 
-Sugestão inicial, a ser confirmada pela equipe.
-
 - React
 - Vite
 - React Router
-- CSS (módulos ou framework de estilos a definir)
+- CSS puro, com arquivos por componente e variáveis globais
 - localStorage para persistência dos dados
 - Git e GitHub
 - Ferramenta de gestão de projeto a definir (Trello, GitHub Projects ou Notion)
-- Ferramenta de prototipação a definir (Figma ou similar)
+- Google Stitch para o protótipo
 
 ## Framework Utilizado
 
@@ -253,13 +234,30 @@ npm run dev
 
 Depois, acesse o endereço exibido no terminal (normalmente http://localhost:5173).
 
+## Estrutura de Pastas
+
+```
+src/
+├── assets/        imagens e ícones
+├── components/
+│   ├── layout/    Header, Sidebar e estrutura geral das telas
+│   └── ui/        Button, Input, Card, Modal e outros componentes reutilizáveis
+├── context/       estado global (perfil, disciplinas, provas...)
+├── data/          dados de exemplo para demonstração
+├── hooks/         hooks customizados, como useLocalStorage
+├── pages/         uma tela por arquivo (Dashboard, Disciplinas, Provas...)
+├── services/      leitura e gravação no localStorage
+├── styles/        variáveis e estilos globais
+└── utils/         funções auxiliares (datas, cálculo de frequência)
+```
+
 ## Protótipo
 
 O protótipo possui no mínimo 10 telas, com fluxo de navegação e versão para celular.
 
 | Item | Link |
 |---|---|
-| URL do protótipo | A preencher |
+| URL do protótipo | https://stitch.withgoogle.com/projects/2198332946532495130 |
 
 Telas previstas
 
@@ -281,7 +279,7 @@ Telas previstas
 |---|---|
 | URL da aplicação | A preencher |
 | URL do repositório | A preencher |
-| URL do protótipo | A preencher |
+| URL do protótipo | https://stitch.withgoogle.com/projects/2198332946532495130 |
 
 ## Processo de Desenvolvimento
 
@@ -297,6 +295,7 @@ Ferramenta utilizada Claude, da Anthropic.
 Utilização
 - criação dos 50 cartões do quadro no GitHub Projects a partir da lista definida pela equipe.
 - apoio na estruturação da documentação e do README;
+- sugestão da estrutura de pastas do projeto React;
 - sugestão de benchmarking, requisitos e user stories, revisados e ajustados pela equipe.
 
 A equipe é responsável pelo código e pela solução entregue. Atualizar esta seção caso outras ferramentas sejam usadas.
