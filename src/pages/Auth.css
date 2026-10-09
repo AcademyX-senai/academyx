@@ -1,0 +1,30 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.auth__rodape {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.auth__rodape a {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
