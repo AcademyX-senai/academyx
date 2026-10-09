@@ -35,7 +35,8 @@ export function AppProvider({ children }) {
   }
 
   function entrar(email, senha) {
-    const conta = contas.find((c) => c.email === email && c.senha === senha)
+    // A conta de demonstração sempre funciona, mesmo que o navegador já tenha contas salvas.
+    const conta = [...contasExemplo, ...contas].find((c) => c.email === email && c.senha === senha)
     if (!conta) return 'E-mail ou senha incorretos.'
     setContaLogada(conta)
     return null
