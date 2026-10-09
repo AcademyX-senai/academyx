@@ -1,0 +1,80 @@
+.calendario__navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+}
+
+.calendario__legenda {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.calendario {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.calendario--semana {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.calendario--mes {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendario__cabecalho {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.calendario__dia {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 90px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.calendario__dia--hoje {
+  border-color: var(--color-secondary);
+  background: #eff6ff;
+}
+
+.calendario__numero {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.calendario__evento {
+  padding: 1px 4px;
+  border-left: 4px solid var(--cor, var(--color-border));
+  border-radius: 3px;
+  background: var(--color-bg);
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calendario__evento--prova {
+  background: #fef3c7;
+}
+
+.calendario__evento--atividade {
+  background: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .calendario--mes .calendario__evento {
+    font-size: 0;
+    height: 6px;
+    padding: 0;
+  }
+}
