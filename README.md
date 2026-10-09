@@ -408,7 +408,7 @@ src/
 ├── context/       # Estado compartilhado
 ├── data/          # Dados de demonstração
 ├── hooks/         # Hooks personalizados
-├── pages/         # Páginas da aplicação
+├── pages/         # Páginas da aplicação (login, cadastro, painel, disciplinas, etc.)
 ├── services/      # Persistência e acesso aos dados
 ├── styles/        # Estilos globais
 └── utils/         # Funções auxiliares
