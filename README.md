@@ -361,20 +361,20 @@ Como estudante, quero visualizar aulas, provas e prazos em um calendário, para 
 
 ## Funcionalidades
 
-A solução contempla os seguintes recursos planejados:
+| Funcionalidade | Descrição | Requisito | Status |
+|---|---|---|---|
+| Perfil do estudante | Cadastro de nome, curso e instituição, com validação | RF01 | Em desenvolvimento (tela de login e criação de conta pendentes) |
+| Disciplinas | Cadastro, edição e exclusão, com professor, sala e cor | RF02 | Implementada |
+| Grade semanal | Aulas por dia e horário, sem conflito de horários | RF03 | Implementada |
+| Provas | Cadastro, edição e exclusão, listadas por data | RF04 | Implementada |
+| Atividades | Prazo de entrega, conclusão e destaque das atrasadas | RF05 | Implementada |
+| Presença e falta | Registro por aula, com possibilidade de correção | RF06 | Implementada |
+| Frequência e alertas | Percentual por disciplina e limite mínimo configurável | RF07 | Implementada |
+| Avisos | Cadastro e marcação de lido | RF08 | Implementada |
+| Painel inicial | Resumo do dia, provas, atividades, avisos e alertas | RF09 | Implementada |
+| Calendário | Visões semanal e mensal, com filtro por disciplina | RF10 | Implementada |
 
-- Perfil do estudante;
-- Cadastro de disciplinas;
-- Grade semanal de horários;
-- Cadastro e acompanhamento de provas;
-- Cadastro e conclusão de atividades;
-- Registro de presença e falta;
-- Cálculo de frequência e alertas;
-- Avisos com marcação de leitura;
-- Painel inicial;
-- Calendário acadêmico com filtro por disciplina.
-
-A disponibilidade de cada funcionalidade deve ser confirmada na versão final da aplicação.
+Os dados ficam salvos no navegador (localStorage), com dados de exemplo no primeiro acesso.
 
 ## Tecnologias utilizadas
 
@@ -536,6 +536,7 @@ A inteligência artificial foi utilizada como apoio ao planejamento e à documen
 - Apoio na organização do README;
 - Sugestão da estrutura de pastas do projeto React;
 - Apoio na elaboração do benchmarking, requisitos e histórias de usuário;
+- Apoio no desenvolvimento das telas e componentes da aplicação, com explicações sobre React;
 - Revisão e adaptação do conteúdo pela equipe.
 
 A equipe é responsável por revisar as informações e validar o código e a solução entregue.
