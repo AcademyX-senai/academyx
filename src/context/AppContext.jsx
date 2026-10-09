@@ -21,8 +21,33 @@ export function AppProvider({ children }) {
   const [presencas, setPresencas] = useLocalStorage('academix:presencas', presencasExemplo)
   const [avisos, setAvisos] = useLocalStorage('academix:avisos', avisosExemplo)
   const [limiteFrequencia, setLimiteFrequencia] = useLocalStorage('academix:limite', LIMITE_PADRAO)
+  const [contas, setContas] = useLocalStorage('academix:contas', [])
+  const [contaLogada, setContaLogada] = useLocalStorage('academix:sessao', null)
+
+  // Retornam uma mensagem de erro, ou null quando deu certo.
+  function cadastrar(email, senha) {
+    if (contas.some((c) => c.email === email)) return 'E-mail já cadastrado.'
+    const nova = { id: Date.now(), email, senha }
+    setContas([...contas, nova])
+    setContaLogada(nova)
+    return null
+  }
+
+  function entrar(email, senha) {
+    const conta = contas.find((c) => c.email === email && c.senha === senha)
+    if (!conta) return 'E-mail ou senha incorretos.'
+    setContaLogada(conta)
+    return null
+  }
+
+  function sair() {
+    setContaLogada(null)
+  }
 
   const valor = {
+    contas, setContas,
+    contaLogada, setContaLogada,
+    cadastrar, entrar, sair,
     perfil, setPerfil,
     disciplinas, setDisciplinas,
     aulas, setAulas,
