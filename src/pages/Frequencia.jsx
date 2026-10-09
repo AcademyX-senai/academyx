@@ -52,7 +52,8 @@ function Frequencia() {
                   />
                 </div>
                 <p className="item__detalhe">
-                  {registros.length} aulas registradas · {faltas} faltas
+                  {registros.length} {registros.length === 1 ? 'aula registrada' : 'aulas registradas'} ·{' '}
+                  {faltas} {faltas === 1 ? 'falta' : 'faltas'}
                 </p>
                 <span className={`badge badge--${status}`}>{textoStatus[status]}</span>
               </Card>
