@@ -1,4 +1,6 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useApp } from '../../context/AppContext'
+import Button from '../ui/Button'
 import './Sidebar.css'
 
 const links = [
@@ -15,6 +17,14 @@ const links = [
 ]
 
 function Sidebar() {
+  const { sair } = useApp()
+  const navigate = useNavigate()
+
+  function handleSair() {
+    sair()
+    navigate('/login')
+  }
+
   return (
     <nav className="sidebar" aria-label="Navegação principal">
       <div className="sidebar__logo">AcademiX</div>
@@ -27,6 +37,11 @@ function Sidebar() {
           </li>
         ))}
       </ul>
+      <div className="sidebar__sair">
+        <Button variant="secondary" onClick={handleSair}>
+          Sair
+        </Button>
+      </div>
     </nav>
   )
 }

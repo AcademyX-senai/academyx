@@ -51,3 +51,12 @@
     flex-wrap: wrap;
   }
 }
+
+.sidebar__sair {
+  margin-top: var(--space-4);
+}
+
+.sidebar__sair .btn--secondary {
+  width: 100%;
+  background: #fff;
+}
