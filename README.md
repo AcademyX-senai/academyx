@@ -363,7 +363,7 @@ Como estudante, quero visualizar aulas, provas e prazos em um calendário, para 
 
 | Funcionalidade | Descrição | Requisito | Status |
 |---|---|---|---|
-| Perfil do estudante | Cadastro de nome, curso e instituição, com validação | RF01 | Em desenvolvimento (tela de login e criação de conta pendentes) |
+| Perfil do estudante | Criação de conta, login, logout e perfil com nome, curso e instituição | RF01 | Implementada |
 | Disciplinas | Cadastro, edição e exclusão, com professor, sala e cor | RF02 | Implementada |
 | Grade semanal | Aulas por dia e horário, sem conflito de horários | RF03 | Implementada |
 | Provas | Cadastro, edição e exclusão, listadas por data | RF04 | Implementada |
@@ -375,6 +375,8 @@ Como estudante, quero visualizar aulas, provas e prazos em um calendário, para 
 | Calendário | Visões semanal e mensal, com filtro por disciplina | RF10 | Implementada |
 
 Os dados ficam salvos no navegador (localStorage), com dados de exemplo no primeiro acesso.
+
+> O login é simulado no próprio navegador, sem servidor. As contas e senhas ficam no localStorage, o que serve para a demonstração acadêmica, mas não é um modelo seguro para uso real.
 
 ## Tecnologias utilizadas
 
