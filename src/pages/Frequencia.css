@@ -1,0 +1,29 @@
+.frequencia__percentual {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.frequencia__barra {
+  height: 8px;
+  margin: var(--space-2) 0;
+  background: var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.frequencia__preenchimento {
+  height: 100%;
+}
+
+.frequencia__preenchimento--ok {
+  background: var(--color-success);
+}
+
+.frequencia__preenchimento--alerta {
+  background: var(--color-warning);
+}
+
+.frequencia__preenchimento--risco {
+  background: var(--color-danger);
+}
