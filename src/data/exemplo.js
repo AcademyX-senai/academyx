@@ -10,6 +10,8 @@ export const aulasExemplo = [
   { id: 3, disciplinaId: 3, diaSemana: 3, horario: '08:00' },
 ]
 
+export const contasExemplo = [{ id: 1, email: 'demo@academix.com', senha: 'demo123' }]
+
 export const provasExemplo = [
   { id: 1, disciplinaId: 1, data: '2026-11-10', horario: '08:00', conteudo: 'Funções e limites' },
 ]

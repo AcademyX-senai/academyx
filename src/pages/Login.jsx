@@ -9,8 +9,8 @@ import './Auth.css'
 function Login() {
   const { entrar } = useApp()
   const navigate = useNavigate()
-  const [form, setForm] = useState({ email: '', senha: '' })
   const [erro, setErro] = useState('')
+  const [form, setForm] = useState({ email: 'demo@academix.com', senha: 'demo123' })
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })

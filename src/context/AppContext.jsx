@@ -7,6 +7,7 @@ import {
   atividadesExemplo,
   presencasExemplo,
   avisosExemplo,
+  contasExemplo,
 } from '../data/exemplo'
 import { LIMITE_PADRAO } from '../utils/frequencia'
 
@@ -21,7 +22,7 @@ export function AppProvider({ children }) {
   const [presencas, setPresencas] = useLocalStorage('academix:presencas', presencasExemplo)
   const [avisos, setAvisos] = useLocalStorage('academix:avisos', avisosExemplo)
   const [limiteFrequencia, setLimiteFrequencia] = useLocalStorage('academix:limite', LIMITE_PADRAO)
-  const [contas, setContas] = useLocalStorage('academix:contas', [])
+  const [contas, setContas] = useLocalStorage('academix:contas', contasExemplo)
   const [contaLogada, setContaLogada] = useLocalStorage('academix:sessao', null)
 
   // Retornam uma mensagem de erro, ou null quando deu certo.
