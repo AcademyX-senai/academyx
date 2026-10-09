@@ -478,7 +478,8 @@ O protótipo final deve possuir pelo menos dez telas, fluxo de navegação e ada
 
 | Item | Link |
 |---|---|
-| Aplicação publicada | A preencher após o deploy |
+| Aplicação publicada | [academyx-green.vercel.app](https://academyx-green.vercel.app) |
+| Conta de demonstração | `demo@academix.com` / `demo123` |
 | Repositório GitHub | https://github.com/AcademyX-senai/academyx |
 | Protótipo | [Google Stitch](https://stitch.withgoogle.com/projects/2198332946532495130) |
 | Quadro Kanban | [GitHub Projects — AcademyX](https://github.com/orgs/AcademyX-senai/projects/1) |
