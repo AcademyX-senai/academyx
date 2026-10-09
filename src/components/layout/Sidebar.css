@@ -40,18 +40,6 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-  }
-
-  .sidebar__lista {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
 .sidebar__sair {
   margin-top: var(--space-4);
 }
@@ -59,4 +47,30 @@
 .sidebar__sair .btn--secondary {
   width: 100%;
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: var(--space-3);
+  }
+
+  .sidebar__logo {
+    margin-bottom: var(--space-2);
+  }
+
+  .sidebar__lista {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+  }
+
+  .sidebar__link {
+    white-space: nowrap;
+  }
+
+  .sidebar__sair {
+    margin-top: var(--space-2);
+  }
 }
