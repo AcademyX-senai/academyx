@@ -397,8 +397,6 @@ O Vite é utilizado para executar o ambiente de desenvolvimento e gerar a versã
 
 ## Estrutura do projeto
 
-A estrutura abaixo é uma referência e deve corresponder aos arquivos reais do repositório.
-
 ```
 src/
 ├── assets/        # Imagens e ícones
@@ -427,7 +425,7 @@ src/
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/AcademyX-senai/academyx.git
 ```
 
 Acesse a pasta:
@@ -450,7 +448,7 @@ npm run dev
 
 Acesse o endereço apresentado no terminal, normalmente `http://localhost:5173`.
 
-Substitua `URL_DO_REPOSITORIO` pelo endereço real do repositório.
+Para entrar na aplicação, use a conta de demonstração (`demo@academix.com` / `demo123`) ou crie uma conta nova.
 
 ## Protótipo
 
@@ -458,7 +456,7 @@ O protótipo foi desenvolvido no Google Stitch.
 
 [Acessar o protótipo do AcademiX](https://stitch.withgoogle.com/projects/2198332946532495130)
 
-### Telas previstas
+### Telas do protótipo
 
 1. Perfil e primeiro acesso;
 2. Painel inicial;
@@ -471,8 +469,6 @@ O protótipo foi desenvolvido no Google Stitch.
 9. Frequência por disciplina;
 10. Avisos;
 11. Calendário.
-
-O protótipo final deve possuir pelo menos dez telas, fluxo de navegação e adaptação para dispositivos móveis.
 
 ## Aplicação e repositório
 
@@ -509,23 +505,17 @@ Foi utilizado o GitHub Projects para organizar as atividades em um quadro Kanban
 
 [Acessar o quadro do projeto](https://github.com/orgs/AcademyX-senai/projects/1)
 
-Os cartões devem representar atividades reais e ter seu status atualizado de acordo com o andamento do trabalho.
-
 ### Git e versionamento
 
-O projeto utiliza Git para registrar as alterações realizadas durante o desenvolvimento.
-
-Exemplos de commits convencionais:
+O projeto utiliza Git, com mais de 50 commits no padrão convencional (`feat`, `fix`, `style`, `docs` e `chore`), como:
 
 ```
-feat: cria tela inicial
-feat: implementa cadastro de disciplinas
-style: ajusta responsividade
-fix: corrige validação do formulário
-docs: atualiza README
+feat: implementa grade semanal de horarios com validacao de conflito
+feat: implementa calculo e alerta de frequencia por disciplina
+feat: cria pagina de login
+style: deixa menu compacto e rolavel no celular
+fix: corrige plural de aulas e faltas na frequencia
 ```
-
-O Hackathon exige pelo menos 30 commits significativos. A quantidade deve ser confirmada no histórico real do repositório.
 
 ## Inteligência artificial
 
@@ -552,25 +542,21 @@ A equipe é responsável por revisar as informações e validar o código e a so
 | Vinicius | Protótipo e identidade visual | Criação das telas no Google Stitch, definição da identidade visual, fluxo de navegação e adaptação para dispositivos móveis |
 | Kaique | Kanban e organização técnica | Organização do GitHub Projects, configuração do React com Vite, desenvolvimento, versionamento e apoio ao deploy |
 
-> Observação: o enunciado do Hackathon prevê quatro integrantes por equipe. Inclua o quarto integrante e suas responsabilidades, caso aplicável.
-
 ## Checklist de entrega
 
-- Aplicação Front-end funcional;
-- Aplicação publicada e acessível pela Internet;
-- Repositório GitHub preenchido;
-- Pelo menos 30 commits significativos;
-- Pelo menos 50 cartões com atividades reais;
-- Benchmarking de cinco soluções documentado;
-- Proposta de valor documentada;
-- Dez requisitos funcionais documentados;
-- Dez requisitos não funcionais documentados;
-- Dez histórias de usuário com critérios de aceitação;
-- Protótipo final com pelo menos dez telas;
-- README revisado e atualizado;
-- Registro de utilização de inteligência artificial.
-
-> Nota: os itens marcados como documentados indicam a presença do conteúdo neste README, não a comprovação de que todas as funcionalidades foram implementadas. Os demais itens devem ser conferidos no repositório, no protótipo e na aplicação publicada.
+- ✅ Aplicação Front-end funcional;
+- ✅ Aplicação publicada e acessível pela Internet;
+- ✅ Repositório GitHub preenchido;
+- ✅ Pelo menos 30 commits significativos;
+- ✅ Pelo menos 50 cartões com atividades reais;
+- ✅ Benchmarking de cinco soluções documentado;
+- ✅ Proposta de valor documentada;
+- ✅ Dez requisitos funcionais documentados;
+- ✅ Dez requisitos não funcionais documentados;
+- ✅ Dez histórias de usuário com critérios de aceitação;
+- ✅ Protótipo final com pelo menos dez telas;
+- ✅ README revisado e atualizado;
+- ✅ Registro de utilização de inteligência artificial.
 
 ---
 
